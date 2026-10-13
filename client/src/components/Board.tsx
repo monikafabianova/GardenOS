@@ -64,11 +64,14 @@ export default function Board({
       <section className='card sprint-header'>
         <div>
           <h2>{active.name}</h2>
-          <p className='muted'>
-            {active.goal && <span>{active.goal} · </span>}
-            {active.area && <span>{active.area} · </span>}
-            {active.start_date} to {active.end_date} · {daysLeft} days left
+          <p className='text-olive-500'>
+            Goal: {active.goal && <span>{active.goal}</span>}
           </p>
+          <p className='text-olive-500'>
+            Area: {active.area && <span>{active.area}</span>}
+          </p>
+          <p className='text-olive-500'>Start date: {active.start_date}</p>
+          <p className='text-olive-500'>End date: {active.end_date}</p>
         </div>
         <p className='progress'>
           {done} / {active.tasks.length} done
